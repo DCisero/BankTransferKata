@@ -40,21 +40,21 @@ public class BankTest {
     @Test
     public void payerTransfers0_transferIsRecorded() {
 
-        assertEquals(0, payer.transactionHistory());
+        assertEquals(0, payer.transactionHistory(0));
 
     }
 
     @Test
     public void payeeReceives0FromPayer_transferIsRecorded() {
 
-        assertEquals(0, payee.transactionHistory());
+        assertEquals(0, payee.transactionHistory(0));
 
     }
 
     @Test
     public void payerTransfersMoney_transferIsRecorded() {
 
-        assertEquals(75, payer.transactionHistory());
+        assertEquals(75, payer.transactionHistory(75));
 
     }
 }

@@ -1,4 +1,4 @@
 public interface Bank {
 
-   int transactionHistory();
+   String [] transactionHistory(int money);
 }
