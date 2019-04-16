@@ -1,4 +1,6 @@
+import java.util.ArrayList;
+
 public interface Bank {
 
-   String [] transactionHistory(int money);
+   ArrayList<Integer> transactionHistory(int money);
 }

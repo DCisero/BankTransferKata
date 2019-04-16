@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Payer implements Bank {
 
 //      private String [] history = new String[10];
@@ -7,8 +9,12 @@ public class Payer implements Bank {
     }
 
     @Override
-    public String [] transactionHistory(int money) {
-        String [] history = new String[money];
+    public ArrayList<Integer> transactionHistory(int money) {
+        ArrayList<Integer> history = new ArrayList<>();
+
+        for (int i = 0; i < history.size(); i++) {
+            history.get(i);
+        }
 
         return history;
     }
