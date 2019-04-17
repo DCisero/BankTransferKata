@@ -1,6 +1,10 @@
-import java.util.ArrayList;
+public class Bank {
 
-public interface Bank {
+    public int transfer(int moneySent) {
+        return moneySent;
+    }
 
-   ArrayList<Integer> transactionHistory(int money);
+    public int receivedTransfer(int moneyReceived){
+        return moneyReceived;
+    }
 }

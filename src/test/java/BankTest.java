@@ -11,23 +11,23 @@ public class BankTest {
         (the payer) to another (the payee)
     3. code to query a bank account's transaction history for any bank transfers to or from a specific account
      */
-    private Payer payer;
-    private Payee payee;
+    private Bank payer;
+    private Bank payee;
 
     @Before
     public void setUp() {
-        payer = new Payer();
-        payee = new Payee();
+        payer = new Bank();
+        payee = new Bank();
     }
 
     @Test
-    public void payerTransfers0_payeeAccountIs0() {
+    public void payerTransfers0_payeeReceives0Dollars() {
         assertEquals(payer.transfer(0), payee.receivedTransfer(0));
 
     }
 
     @Test
-    public void payerTransfers100Dollars_payeeAccountIs100() {
+    public void payerTransfersMoney_payeeReceivesMoney() {
         assertEquals(payer.transfer(100), payee.receivedTransfer(100));
         assertEquals(payer.transfer(200), payee.receivedTransfer(200));
         assertEquals(payer.transfer(55), payee.receivedTransfer(55));
@@ -35,26 +35,4 @@ public class BankTest {
 
     }
 
-    //2. code to keep a record of the transfer for both bank accounts in a transaction history
-
-    @Test
-    public void payerTransfers0_transferIsRecorded() {
-
-        assertEquals(0, payer.transactionHistory(0));
-
-    }
-
-    @Test
-    public void payeeReceives0FromPayer_transferIsRecorded() {
-
-        assertEquals(0, payee.transactionHistory(0));
-
-    }
-
-    @Test
-    public void payerTransfersMoney_transferIsRecorded() {
-
-        assertEquals(75, payer.transactionHistory(75));
-
-    }
 }
