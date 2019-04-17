@@ -5,12 +5,9 @@ import static org.junit.Assert.assertEquals;
 
 public class BankTest {
 
-    /*
-    Bank Transfer
-    1. code to transfer a specified amount of money from one bank account-
-        (the payer) to another (the payee)
-    3. code to query a bank account's transaction history for any bank transfers to or from a specific account
-     */
+    //1. code to transfer a specified amount of money from one bank account- (the payer) to another (the payee)
+    //3. code to query a bank account's transaction history for any bank transfers to or from a specific account
+
     private Bank payer;
     private Bank payee;
 
